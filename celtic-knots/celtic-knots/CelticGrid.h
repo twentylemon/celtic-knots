@@ -1,12 +1,13 @@
-#ifndef CELTGRID_H
-#define CELTGRID_H
+
+#ifndef CELTICGRID_H
+#define CELTICGRID_H
 
 #include <lemon/collections.h>
 
-class CeltGrid
+class CelticGrid
 {
 public:
-    CeltGrid();
+    CelticGrid();
 
 private:
 
