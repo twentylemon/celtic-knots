@@ -18,10 +18,13 @@
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CelticNode.h">
+    <ClInclude Include="CelticGrid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CelticGrid.h">
+    <ClInclude Include="BreakMarker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CelticCell.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,10 +32,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CelticNode.cpp">
+    <ClCompile Include="CelticGrid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CelticGrid.cpp">
+    <ClCompile Include="BreakMarker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CelticCell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

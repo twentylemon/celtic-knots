@@ -64,13 +64,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BreakMarker.h" />
+    <ClInclude Include="CelticCell.h" />
     <ClInclude Include="CelticGrid.h" />
-    <ClInclude Include="CelticNode.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BreakMarker.cpp" />
+    <ClCompile Include="CelticCell.cpp" />
     <ClCompile Include="CelticGrid.cpp" />
-    <ClCompile Include="CelticNode.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
