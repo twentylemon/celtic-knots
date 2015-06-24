@@ -4,21 +4,21 @@
 
 
 CelticCell::CelticCell() :
-    up(false),
-    down(false),
-    left(false),
-    right(false)
+    x_(-1),
+    y_(-1),
+    up_(false),
+    down_(false),
+    left_(false),
+    right_(false)
 {
 }
 
-CelticCell::CelticCell(bool up, bool down, bool left, bool right) :
-    up(up),
-    down(down),
-    left(left),
-    right(right)
+CelticCell::CelticCell(int x, int y) :
+    x_(x),
+    y_(y),
+    up_(false),
+    down_(false),
+    left_(false),
+    right_(false)
 {
-}
-
-bool CelticCell::operator==(const CelticCell& rhs) const {
-    return false;
 }

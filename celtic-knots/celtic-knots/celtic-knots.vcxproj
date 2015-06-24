@@ -65,12 +65,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BreakMarker.h" />
+    <ClInclude Include="CellRenderer.h" />
     <ClInclude Include="CelticCell.h" />
     <ClInclude Include="CelticGrid.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BreakMarker.cpp" />
+    <ClCompile Include="CellRenderer.cpp" />
     <ClCompile Include="CelticCell.cpp" />
     <ClCompile Include="CelticGrid.cpp" />
     <ClCompile Include="main.cpp" />

@@ -7,6 +7,8 @@ Global g;
 void displayFunc() {
     glClear(GL_COLOR_BUFFER_BIT);
     g.knot.glRender(g.windowWidth, g.windowHeight);
+
+
     glFlush();
 }
 
@@ -17,7 +19,7 @@ int main(int argc, char** argv) {
     g.windowHeight = 300;
 
     g.knot = CelticGrid("sample-knot.txt");
-    g.knot.setCellSize(g.windowWidth / g.knot.width());
+    g.knot.set_cell_size(g.windowWidth / g.knot.width());
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);
