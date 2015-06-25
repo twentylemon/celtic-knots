@@ -99,6 +99,9 @@ public:
     // adds a new marker to the grid
     void addMarker(const BreakMarker& marker);
 
+    // updates the cell neighbours given the marker flag
+    void handleCell(int x, int y, BreakMarker::Direction direction, bool marker);
+
 
 
     // renders this knot on the gl display

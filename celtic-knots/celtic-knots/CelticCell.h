@@ -22,6 +22,15 @@ public:
     bool left() const { return left_; }
     bool right() const { return right_; }
 
+    int ord() const {
+        int o = 0;
+        if (up()) { o++; }
+        if (down()) { o++; }
+        if (left()) { o++; }
+        if (right()) { o++; }
+        return o;
+    }
+
     void set_x(int x) { x_ = x; }
     void set_y(int y) { y_ = y; }
     void set_up(bool up) { up_ = up; }

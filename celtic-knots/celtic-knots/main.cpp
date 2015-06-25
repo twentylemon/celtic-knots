@@ -15,8 +15,8 @@ void displayFunc() {
 
 int main(int argc, char** argv) {
 
-    g.windowWidth = 300;
-    g.windowHeight = 300;
+    g.windowWidth = 600;
+    g.windowHeight = 600;
 
     g.knot = CelticGrid("sample-knot.txt");
     g.knot.set_cell_size(g.windowWidth / g.knot.width());
@@ -30,7 +30,10 @@ int main(int argc, char** argv) {
     glClearColor(0, 0, 0, 1);
     glMatrixMode(GL_PROJECTION | GL_MATRIX_MODE);
     glLoadIdentity();
-    glOrtho(-10, g.windowWidth+10, -10, g.windowHeight+10, 0, 1);
+
+    glEnable(GL_LINE_SMOOTH);
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+    glOrtho(-100, g.windowWidth+100, -100, g.windowHeight+100, 0, 1);
 
     glutDisplayFunc(displayFunc);
 

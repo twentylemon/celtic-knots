@@ -54,7 +54,7 @@ void CelticGrid::init() {
             cells_[x].emplace_back(x, y);
         }
     }
-    cell_renderer_ = CellRenderer(cell_size(), cell_size()/2.0f, cell_size()/5.0f);
+    cell_renderer_ = CellRenderer(cell_size(), cell_size()/5.0f, cell_size()/8.0f);
 }
 
 
@@ -64,24 +64,28 @@ void CelticGrid::addMarker(const BreakMarker& marker) {
 
 void CelticGrid::addMarker(int x, int y, BreakMarker::Direction direction) {
     markers_.emplace_back(x, y, direction); // add the marker
+    handleCell(x, y, direction, true);
+}
+
+void CelticGrid::handleCell(int x, int y, BreakMarker::Direction direction, bool marker) {
     if (direction == BreakMarker::East) {
         if (y > 0) {
-            cells_[x][y-1].set_down(true);
-            cells_[x+1][y-1].set_down(true);
+            cells_[x][y-1].set_down(marker);
+            cells_[x+1][y-1].set_down(marker);
         }
         if (y < height()) {
-            cells_[x][y].set_up(true);
-            cells_[x+1][y].set_up(true);
+            cells_[x][y].set_up(marker);
+            cells_[x+1][y].set_up(marker);
         }
     }
     else {
         if (x > 0) {
-            cells_[x-1][y].set_right(true);
-            cells_[x-1][y+1].set_right(true);
+            cells_[x-1][y].set_right(marker);
+            cells_[x-1][y+1].set_right(marker);
         }
         if (x < width()) {
-            cells_[x][y].set_left(true);
-            cells_[x][y+1].set_left(true);
+            cells_[x][y].set_left(marker);
+            cells_[x][y+1].set_left(marker);
         }
     }
 }
@@ -123,10 +127,6 @@ void CelticGrid::renderMarkers() const {
 }
 
 void CelticGrid::glRender(int windowWidth, int windowHeight) const {
-    glMatrixMode(GL_PROJECTION | GL_MATRIX_MODE);
-    glLoadIdentity();
-    glOrtho(-100, windowWidth+100, windowHeight+100, -100, 0, 1);
-
     if (display_grid()) {
         renderGrid();
     }
