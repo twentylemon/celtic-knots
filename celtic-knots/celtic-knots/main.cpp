@@ -12,6 +12,18 @@ void displayFunc() {
     glFlush();
 }
 
+/**
+    glut keyboard func
+    q - quit
+**/
+void keyboardFunc(unsigned char key, int x, int y) {
+    switch (key) {
+    case 'q':
+        glutLeaveMainLoop();
+        break;
+    }
+}
+
 
 int main(int argc, char** argv) {
 
@@ -33,9 +45,10 @@ int main(int argc, char** argv) {
 
     glEnable(GL_LINE_SMOOTH);
     glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-    glOrtho(-100, g.windowWidth+100, -100, g.windowHeight+100, 0, 1);
+    glOrtho(-100, g.windowWidth+100, g.windowHeight+100, -100, 0, 1);
 
     glutDisplayFunc(displayFunc);
+    glutKeyboardFunc(keyboardFunc);
 
     glutMainLoop();
     return 0;

@@ -33,8 +33,8 @@ void CellRenderer::setUpScissor(float objX, float objY) const {
     glGetDoublev(GL_MODELVIEW_MATRIX, model);
     glGetDoublev(GL_PROJECTION_MATRIX, proj);
     glGetIntegerv(GL_VIEWPORT, view);
-    gluProject(objX-1, objY-1, 0.0, model, proj, view, &startX, &startY, &z);
-    gluProject(objX+cell_size()+1, objY+cell_size()+1, 0.0, model, proj, view, &endX, &endY, &z);
+    gluProject(objX-1, objY+cell_size()+1, 0.0, model, proj, view, &startX, &startY, &z);
+    gluProject(objX+cell_size()+1, objY-1, 0.0, model, proj, view, &endX, &endY, &z);
     glScissor((int)startX, (int)startY, (int)(endX-startX), (int)(endY-startY));
 }
 
@@ -51,13 +51,13 @@ void CellRenderer::renderCover() const {
     startBorder();
     glBegin(GL_LINES);
         glVertex2f(cell_size(), 0.0f);
-        glVertex2f(0.0f, -cell_size());
+        glVertex2f(0.0f, cell_size());
     glEnd();
 
     startRibbon();
     glBegin(GL_LINES);
         glVertex2f(cell_size(), 0.0f);
-        glVertex2f(0.0f, -cell_size());
+        glVertex2f(0.0f, cell_size());
     glEnd();
 }
 
@@ -66,9 +66,10 @@ void CellRenderer::render(const CelticCell& cell) const {
     // this draws a pipe in each cell
     glPushMatrix();
     setUpScissor(cell.x() * cell_size(), cell.y() * cell_size());
-    glTranslatef(cell.x() * cell_size() + half_size(), cell.y() * cell_size() + half_size(), 0.0f);
     glEnable(GL_SCISSOR_TEST);
+    glTranslatef(cell.x() * cell_size() + half_size(), cell.y() * cell_size() + half_size(), 0.0f);
     //glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+    //glScalef(-1.0, 1.0, 1.0);
     int r = std::rand() % 5;
     if (r == 0)
         renderPipe();
@@ -102,14 +103,14 @@ void CellRenderer::renderPipe() const {
 void CellRenderer::renderDiagPipe() const {
     startBorder();
     glBegin(GL_LINES);
-        glVertex2f(-half_size(), half_size());
-        glVertex2f(half_size(), -half_size());
+        glVertex2f(-half_size(), -half_size());
+        glVertex2f(half_size(), half_size());
     glEnd();
 
     startRibbon();
     glBegin(GL_LINES);
-        glVertex2f(-half_size(), half_size());
-        glVertex2f(half_size(), -half_size());
+        glVertex2f(-half_size(),-half_size());
+        glVertex2f(half_size(), half_size());
     glEnd();
 
     renderCover();  // cover up the corner
@@ -119,7 +120,7 @@ void CellRenderer::renderCorner() const {
     float points[3][3] = {
         { -half_size(), 0.0f, 0.0f },   // left middle
         { 0.0f, 0.0f, 0.0f },           // control point, the center
-        { 0.0f, -half_size(), 0.0f }};  // bottom middle
+        { 0.0f, half_size(), 0.0f }};   // bottom middle
     glMap1f(GL_MAP1_VERTEX_3, 0.0f, NUM_POINTS, 3, 3, &points[0][0]);
     glEnable(GL_MAP1_VERTEX_3);
     
@@ -134,7 +135,7 @@ void CellRenderer::renderOverBend() const {
     float points[3][3] = {
         { -half_size(), 0.0f, 0.0f },           // left middle
         { 0.0f, 0.0f, 0.0f },                   // control point, the center
-        { half_size(), -half_size(), 0.0f }};   // right-bottom corner
+        { half_size(), half_size(), 0.0f }};    // bottom-right corner
     glMap1f(GL_MAP1_VERTEX_3, 0.0f, NUM_POINTS, 3, 3, &points[0][0]);
     glEnable(GL_MAP1_VERTEX_3);
     
