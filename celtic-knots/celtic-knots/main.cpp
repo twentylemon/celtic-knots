@@ -36,6 +36,7 @@ void keyboardFunc(unsigned char key, int x, int y) {
     }
 }
 
+// returns the closest grid point to the window lcoation (x,y), or NO_SELECTION if >10 away from any
 std::pair<int,int> getSelection(int x, int y) {
     GLdouble objX, objY, objZ;
     gluUnProject(x, g.windowHeight - y, 0, g.model, g.proj, g.view, &objX, &objY, &objZ);
@@ -55,6 +56,7 @@ void mouseFunc(int button, int state, int x, int y) {
         if (g.selected != NO_SELECTION) { // try to add/remove a break marker
             std::pair<int,int> select = getSelection(x, y);
             if (std::abs(g.selected.first - select.first) == 2 && g.selected.second == select.second) {
+                // lazy short ciruit, if add failed, calls remove
                 g.knot.addMarker(std::min(g.selected.first, select.first), select.second, BreakMarker::East)
                     || g.knot.removeMarker(std::min(g.selected.first, select.first), select.second, BreakMarker::East);
                 g.selected = NO_SELECTION;
@@ -65,7 +67,7 @@ void mouseFunc(int button, int state, int x, int y) {
                 g.selected = NO_SELECTION;
             }
             else {
-                g.selected = getSelection(x, y);
+                g.selected = getSelection(x, y); // update the selection
             }
         }
         else {
@@ -81,7 +83,7 @@ int main(int argc, char** argv) {
     g.windowHeight = 600;
     
     g.knot = CelticGrid("../../sample-knot.txt");
-    g.knot = CelticGrid("../../border-knot.txt");
+    //g.knot = CelticGrid("../../border-knot.txt");
     g.knot.set_cell_size(g.windowWidth / g.knot.width());
 
     g.selected = NO_SELECTION;
@@ -107,6 +109,8 @@ int main(int argc, char** argv) {
     glutDisplayFunc(displayFunc);
     glutKeyboardFunc(keyboardFunc);
     glutMouseFunc(mouseFunc);
+
+    std::cout << "click on grid locations to add/remove markers" << std::endl << " v - save to text file" << std::endl;
 
     glutMainLoop();
     return 0;

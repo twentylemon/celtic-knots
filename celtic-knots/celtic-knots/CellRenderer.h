@@ -3,67 +3,60 @@
 #define CELLRENDERER_H
 
 #include <string>
+#include <sstream>
 #include <fstream>
 #include <GL/glut.h>
 #include <lemon/collections.h>
 
 #include "CelticCell.h"
 
+// handles rendering individual cells to screen and svg
+// each cell is rendering using a lookup table
 class CellRenderer
 {
 public:
     // inits cell size to 0
-    CellRenderer() : cell_size_(0.0f), half_size_(0.0f) { }
+    CellRenderer();
 
     // inits the cell size
     CellRenderer(int cellSize, float ribbonSize, float borderSize);
 
     // returns the cell size
-    float cell_size() const { return cell_size_; }
+    float cell_size() const;
 
     // returns the cell size div 2
-    float half_size() const { return half_size_; }
+    float half_size() const;
 
     // returns the width of the ribbon
-    float ribbon_size() const { return ribbon_size_; }
+    float ribbon_size() const;
 
     // returns the width of the ribbon
-    float border_size() const { return border_size_; }
+    float border_size() const;
 
     // sets the new cell size and half cell size
-    void set_cell_size(float cell_size) {
-        cell_size_ = cell_size;
-        half_size_ = cell_size / 2.0f;
-    }
+    void set_cell_size(float cell_size);
     
     // sets the new ribbon width size
-    void set_ribbon_size(float ribbon_size) { ribbon_size_ = ribbon_size; }
+    void set_ribbon_size(float ribbon_size);
 
     // sets the new ribbon width size
-    void set_border_size(float border_size) { border_size_ = border_size; }
+    void set_border_size(float border_size);
 
     // sets the ribbon color
-    void set_ribbon_color(float red, float green, float blue) {
-        ribbon_color_[0] = red;
-        ribbon_color_[1] = green;
-        ribbon_color_[2] = blue;
-    }
+    void set_ribbon_color(float red, float green, float blue);
 
     // sets the border color
-    void set_border_color(float red, float green, float blue) {
-        border_color_[0] = red;
-        border_color_[1] = green;
-        border_color_[2] = blue;
-    }
+    void set_border_color(float red, float green, float blue);
 
 
     // renders the cell and writes the svg to the stream
-    void render(const CelticCell& cell, std::ostream& svg) const;
+    void render(const CelticCell& cell, std::ostream& out) const;
 
     // renders the cell
     void render(const CelticCell& cell) const;
 
-    
+    // copy assignment; avoid the stream and mutables
+    CellRenderer& operator=(const CellRenderer& rhs);
 
 private:
     // renders odd cells
@@ -102,6 +95,8 @@ private:
     // renders a left-to-bottom-right under bend
     void renderUnderBend() const;
 
+    // returns a html rgb string for the color
+    std::string toRGB(const lemon::Array<float,3>& color) const;
 
     float cell_size_;   // the cell size
     float half_size_;   // half the cell size
@@ -111,6 +106,9 @@ private:
 
     lemon::Array<float, 3> ribbon_color_;
     lemon::Array<float, 3> border_color_;
+    
+    mutable std::ostringstream svg;
+    mutable std::string transform;
 };
 
 #endif

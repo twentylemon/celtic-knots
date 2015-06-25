@@ -4,6 +4,7 @@
 
 #include <iostream>
 
+// represents a break marker in th grid
 class BreakMarker
 {
 public:

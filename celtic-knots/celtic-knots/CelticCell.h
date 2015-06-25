@@ -2,6 +2,7 @@
 #ifndef CELTICCELL_H
 #define CELTICCELL_H
 
+// one cell in the grid, stores position and flags indicating neighbouring break markers
 class CelticCell
 {
 public:
@@ -11,32 +12,47 @@ public:
     // sets the position of this cell, all edges around to false
     CelticCell(int x, int y);
 
-    // for lemon::collections
-    bool operator==(const CelticCell& rhs) const { return x() == rhs.x() && y() == rhs.y(); }
+    // returns true if this and rhs are equal
+    bool operator==(const CelticCell& rhs) const;
 
-    int x() const { return x_; }
-    int y() const { return y_; }
+    // returns the x position in the grid
+    int x() const;
 
-    bool up() const { return up_; }
-    bool down() const { return down_; }
-    bool left() const { return left_; }
-    bool right() const { return right_; }
+    // returns the y position in the grid
+    int y() const;
 
-    int ord() const {
-        int o = 0;
-        if (up()) { o++; }
-        if (down()) { o++; }
-        if (left()) { o++; }
-        if (right()) { o++; }
-        return o;
-    }
+    // returns true if there is a marker edge above this cell
+    bool up() const;
 
-    void set_x(int x) { x_ = x; }
-    void set_y(int y) { y_ = y; }
-    void set_up(bool up) { up_ = up; }
-    void set_down(bool down) { down_ = down; }
-    void set_left(bool left) { left_ = left; }
-    void set_right(bool right) { right_ = right; }
+    // returns true if there is a marker edge below this cell
+    bool down() const;
+
+    // returns true if there is a marker edge to the left of this cell
+    bool left() const;
+
+    // returns true if there is a marker edge to the right of this cell
+    bool right() const;
+
+    // returns the number of break markers around this cell
+    int ord() const;
+
+    // sets the x position
+    void set_x(int x);
+
+    // sets the new y position
+    void set_y(int y);
+
+    // sets if there a marker edge above this cell
+    void set_up(bool up);
+
+    // sets if there a marker edge below this cell
+    void set_down(bool down);
+
+    // sets if there a marker edge to the left of this cell
+    void set_left(bool left);
+
+    // sets if there a marker edge to the right of this cell
+    void set_right(bool right);
 
 private:
     int x_, y_;

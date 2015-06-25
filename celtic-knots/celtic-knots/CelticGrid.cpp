@@ -54,7 +54,89 @@ void CelticGrid::init() {
             cells_[x].emplace_back(x, y);
         }
     }
-    cell_renderer_ = CellRenderer(cell_size(), cell_size()/5.0f, cell_size()/8.0f);
+    cell_renderer_ = CellRenderer(cell_size(), cell_size()/3.0f, cell_size()/4.0f);
+}
+
+
+int CelticGrid::width() const {
+    return width_;
+}
+
+int CelticGrid::height() const {
+    return height_;
+}
+
+int CelticGrid::cell_size() const {
+    return cell_size_;
+}
+
+int CelticGrid::stroke() const {
+    return stroke_;
+}
+
+float CelticGrid::point_size() const {
+    return point_size_;
+}
+
+float CelticGrid::marker_size() const {
+    return marker_size_;
+}
+    
+bool CelticGrid::display_grid() const {
+    return display_grid_;
+}
+
+bool CelticGrid::display_markers() const {
+    return display_markers_;
+}
+
+lemon::Vector<BreakMarker>& CelticGrid::markers() {
+    return markers_;
+}
+
+const lemon::Vector<BreakMarker>& CelticGrid::markers() const {
+    return markers_;
+}
+
+lemon::Vector<lemon::Vector<CelticCell>>& CelticGrid::cells() {
+    return cells_;
+}
+
+const lemon::Vector<lemon::Vector<CelticCell>>& CelticGrid::cells() const {
+    return cells_;
+}
+
+CellRenderer& CelticGrid::cell_renderer() {
+    return cell_renderer_;
+}
+
+const CellRenderer& CelticGrid::cell_renderer() const {
+    return cell_renderer_;
+}
+
+void CelticGrid::set_cell_size(int cell_size) {
+    cell_size_ = cell_size;
+    cell_renderer_.set_cell_size((float)cell_size);
+}
+
+void CelticGrid::set_stroke(int stroke) {
+    stroke_ = stroke;
+}
+
+void CelticGrid::set_point_size(float point_size) {
+    point_size_ = point_size;
+}
+    
+void CelticGrid::set_marker_size(float marker_size) {
+    marker_size_ = marker_size;
+}
+
+void CelticGrid::set_display_grid(bool display_grid) {
+    display_grid_ = display_grid;
+}
+
+void CelticGrid::set_display_markers(bool display_markers) {
+    display_markers_ = display_markers;
 }
 
 
@@ -145,7 +227,6 @@ void CelticGrid::glRender(int windowWidth, int windowHeight) const {
     svg << "<?xml version=\"1.0\"?>" << std::endl
         << "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">" << std::endl
         << "<svg width=\"" << windowWidth << "\" height=\"" << windowHeight << "\" "
-        //<< "viewBox=\"0 0 " << windowWidth << " " << windowHeight << "\" "
         << "version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">" << std::endl;
     
     if (display_grid()) {
@@ -155,13 +236,10 @@ void CelticGrid::glRender(int windowWidth, int windowHeight) const {
         renderMarkers();
     }
     cells_.each([this,&svg](const lemon::Vector<CelticCell>& col){
-        col.each([this,&svg](const CelticCell& cell){ cell_renderer_.render(cell); });
+        col.each([this,&svg](const CelticCell& cell){
+            cell_renderer_.render(cell, svg);
+        });
     });
     svg << "</svg>" << std::endl;
     svg.close();
-}
-
-
-std::ostream& operator<<(std::ostream& out, const CelticGrid& knot) {
-    return out;
 }
