@@ -94,10 +94,10 @@ public:
     void save(std::string outFile) const;
 
     // adds a new marker to the grid
-    void addMarker(int x, int y, BreakMarker::Direction direction);
-    
-    // adds a new marker to the grid
-    void addMarker(const BreakMarker& marker);
+    bool addMarker(int x, int y, BreakMarker::Direction direction);
+
+    // removes the break marker
+    bool removeMarker(int x, int y, BreakMarker::Direction direction);
 
     // updates the cell neighbours given the marker flag
     void handleCell(int x, int y, BreakMarker::Direction direction, bool marker);
@@ -106,6 +106,9 @@ public:
 
     // renders this knot on the gl display
     void glRender(int windowWidth, int windowHeight) const;
+
+    // renders the point as yellow
+    void renderSelect(int x, int y) const;
     
     // writes the svg version of the image to the stream
     friend std::ostream& operator<<(std::ostream& out, const CelticGrid& knot);

@@ -58,13 +58,21 @@ void CelticGrid::init() {
 }
 
 
-void CelticGrid::addMarker(const BreakMarker& marker) {
-    addMarker(marker.x(), marker.y(), marker.direction());
+
+
+bool CelticGrid::addMarker(int x, int y, BreakMarker::Direction direction) {
+    if (!markers_.contains(BreakMarker(x, y, direction))) {
+        markers_.emplace_back(x, y, direction); // add the marker
+        handleCell(x, y, direction, true);
+        return true;
+    }
+    return false;
 }
 
-void CelticGrid::addMarker(int x, int y, BreakMarker::Direction direction) {
-    markers_.emplace_back(x, y, direction); // add the marker
-    handleCell(x, y, direction, true);
+bool CelticGrid::removeMarker(int x, int y, BreakMarker::Direction direction) {
+    int rem = markers_.remove(BreakMarker(x, y, direction));
+    handleCell(x, y, direction, false);
+    return rem != 0;
 }
 
 void CelticGrid::handleCell(int x, int y, BreakMarker::Direction direction, bool marker) {
@@ -90,7 +98,13 @@ void CelticGrid::handleCell(int x, int y, BreakMarker::Direction direction, bool
     }
 }
 
-
+void CelticGrid::renderSelect(int x, int y) const {
+    glPointSize(point_size());
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POINTS);
+        glVertex2i(x * cell_size(), y * cell_size());
+    glEnd();
+}
 
 void CelticGrid::renderGrid() const {
     glPointSize(point_size());
@@ -127,15 +141,24 @@ void CelticGrid::renderMarkers() const {
 }
 
 void CelticGrid::glRender(int windowWidth, int windowHeight) const {
+    std::ofstream svg("../../knot.svg");
+    svg << "<?xml version=\"1.0\"?>" << std::endl
+        << "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">" << std::endl
+        << "<svg width=\"" << windowWidth << "\" height=\"" << windowHeight << "\" "
+        //<< "viewBox=\"0 0 " << windowWidth << " " << windowHeight << "\" "
+        << "version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">" << std::endl;
+    
     if (display_grid()) {
         renderGrid();
     }
     if (display_markers()) {
         renderMarkers();
     }
-    cells_.each([this](const lemon::Vector<CelticCell>& col){
-        col.each([this](const CelticCell& cell){ cell_renderer_.render(cell); });
+    cells_.each([this,&svg](const lemon::Vector<CelticCell>& col){
+        col.each([this,&svg](const CelticCell& cell){ cell_renderer_.render(cell); });
     });
+    svg << "</svg>" << std::endl;
+    svg.close();
 }
 
 

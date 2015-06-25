@@ -2,7 +2,8 @@
 #ifndef CELLRENDERER_H
 #define CELLRENDERER_H
 
-#include <iostream>
+#include <string>
+#include <fstream>
 #include <GL/glut.h>
 #include <lemon/collections.h>
 
@@ -56,12 +57,20 @@ public:
     }
 
 
+    // renders the cell and writes the svg to the stream
+    void render(const CelticCell& cell, std::ostream& svg) const;
+
     // renders the cell
     void render(const CelticCell& cell) const;
 
+    
+
 private:
-    void renderOdd(const CelticCell& cell) const;
-    void renderEven(const CelticCell& cell) const;
+    // renders odd cells
+    void renderOddCell(const CelticCell& cell) const;
+
+    // renders even cells
+    void renderEvenCell(const CelticCell& cell) const;
 
     // handles gl calls for starting the border strip
     void startBorder() const;

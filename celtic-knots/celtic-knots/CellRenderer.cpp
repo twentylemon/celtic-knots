@@ -14,6 +14,10 @@ CellRenderer::CellRenderer(int cellSize, float ribbonSize, float borderSize) :
     set_border_color(1.0f, 0.0f, 1.0f);
 }
 
+void CellRenderer::render(const CelticCell& cell) const {
+    render(cell, std::ofstream());  // stream will just error, nothing to worry about
+}
+
 void CellRenderer::startBorder() const {
     glColor3fv(border_color_.data());
     glPointSize(2.0f * border_size() + ribbon_size());
@@ -62,28 +66,117 @@ void CellRenderer::renderCover() const {
 }
 
 
-void CellRenderer::render(const CelticCell& cell) const {
-    // this draws a pipe in each cell
-    glPushMatrix();
-    setUpScissor(cell.x() * cell_size(), cell.y() * cell_size());
-    glEnable(GL_SCISSOR_TEST);
-    glTranslatef(cell.x() * cell_size() + half_size(), cell.y() * cell_size() + half_size(), 0.0f);
-    //glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
-    //glScalef(-1.0, 1.0, 1.0);
-    int r = std::rand() % 5;
-    if (r == 0)
-        renderPipe();
-    else if (r == 1)
-        renderCorner();
-    else if (r == 2)
-        renderOverBend();
-    else if (r == 3)
-        renderUnderBend();
-    else
+void CellRenderer::render(const CelticCell& cell, std::ostream& svg) const {
+    if (cell.ord() < 3) {
+        glPushMatrix();
+        setUpScissor(cell.x() * cell_size(), cell.y() * cell_size());
+        glEnable(GL_SCISSOR_TEST);
+        glTranslatef(cell.x() * cell_size() + half_size(), cell.y() * cell_size() + half_size(), 0.0f);
+        bool odd = (cell.x() + cell.y()) % 2 == 1;
+        if (odd) {
+            renderOddCell(cell);
+        }
+        else {
+            renderEvenCell(cell);
+        }
+        glDisable(GL_SCISSOR_TEST);
+        glPopMatrix();
+        svg << "hello" << std::endl;
+    }
+    /* TODO
+    svg: clip-path can be used as glScissor, transform="..." can be used for gl* transformations
+    */
+}
+
+void CellRenderer::renderOddCell(const CelticCell& cell) const {
+    bool evenCol = cell.y() % 2 == 0;
+    if (cell.ord() == 0) {
+        if (evenCol) {
+            glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
+        }
         renderDiagPipe();
-    glDisable(GL_SCISSOR_TEST);
-    glPopMatrix();
-    
+    }
+    else if (cell.ord() == 1) { // always render a bend
+        if (cell.left()) {
+            glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+            glScalef(1.0f, -1.0f, 1.0f);
+            evenCol ? renderOverBend() : renderUnderBend();
+        }
+        else if (cell.up()) {
+            evenCol ? renderOverBend() : renderUnderBend();
+        }
+        else if (cell.right()) {
+            glRotatef(-90.0f, 0.0f, 0.0f, 1.0f);
+            glScalef(1.0f, -1.0f, 1.0f);
+            evenCol ? renderUnderBend() : renderOverBend();
+        }
+        else if (cell.down()) {
+            glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
+            evenCol ? renderUnderBend() : renderOverBend();
+        }
+    }
+    else if (cell.ord() == 2) {
+        if (cell.up() && cell.right()) {
+            renderCorner();
+        }
+        else if (cell.left() && cell.down()) {
+            glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
+            renderCorner();
+        }
+        else if (cell.left() && cell.right()) {
+            glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+            renderPipe();
+        }
+        else if (cell.up() && cell.down()) {
+            renderPipe();
+        }
+    }
+}
+
+void CellRenderer::renderEvenCell(const CelticCell& cell) const {
+    bool evenCol = cell.y() % 2 == 0;
+    if (cell.ord() == 0) {
+        if (!evenCol) {
+            glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
+        }
+        glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+        renderDiagPipe();
+    }
+    else if (cell.ord() == 1) { // always render a bend
+        if (cell.left()) {
+            glRotatef(-90.0f, 0.0f, 0.0f, 1.0f);
+            evenCol ? renderOverBend() : renderUnderBend();
+        }
+        else if (cell.up()) {
+            glScalef(-1.0f, 1.0f, 1.0f);
+            evenCol ? renderUnderBend() : renderOverBend();
+        }
+        else if (cell.right()) {
+            glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+            evenCol ? renderUnderBend() : renderOverBend();
+        }
+        else if (cell.down()) {
+            glScalef(1.0f, -1.0f, 1.0f);
+            evenCol ? renderOverBend() : renderUnderBend();
+        }
+    }
+    else if (cell.ord() == 2) {
+        if (cell.left() && cell.up()) {
+            glRotatef(-90.0f, 0.0f, 0.0f, 1.0f);
+            renderCorner();
+        }
+        else if (cell.right() && cell.down()) {
+            glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+            renderCorner();
+        }
+        else if (cell.left() && cell.right()) {
+            glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
+            renderPipe();
+        }
+        else if (cell.up() && cell.down()) {
+            renderPipe();
+        }
+    }
 }
 
 void CellRenderer::renderPipe() const {
