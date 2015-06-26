@@ -59,11 +59,14 @@ public:
     CellRenderer& operator=(const CellRenderer& rhs);
 
 private:
-    // renders odd cells
-    void renderOddCell(const CelticCell& cell) const;
+    // initializes all the rendering functions
+    void init();
+    
+    // converts a cell into a unique index
+    int idxof(int x, int y, bool up, bool down, bool left, bool right) const;
 
-    // renders even cells
-    void renderEvenCell(const CelticCell& cell) const;
+    // converts a cell into a unique index
+    int idxof(const CelticCell& cell) const;
 
     // handles gl calls for starting the border strip
     void startBorder() const;
@@ -107,8 +110,10 @@ private:
     lemon::Array<float, 3> ribbon_color_;
     lemon::Array<float, 3> border_color_;
     
-    mutable std::ostringstream svg;
-    mutable std::string transform;
+    mutable std::ostringstream svg; // stream to hold the svg output
+    mutable std::string transform;  // group transformation of the svg element
+
+    lemon::Map<int, std::function<void()>> rendFunc;    // cell rendering map
 };
 
 #endif

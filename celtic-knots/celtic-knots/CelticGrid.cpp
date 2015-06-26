@@ -54,7 +54,7 @@ void CelticGrid::init() {
             cells_[x].emplace_back(x, y);
         }
     }
-    cell_renderer_ = CellRenderer(cell_size(), cell_size()/3.0f, cell_size()/4.0f);
+    cell_renderer_ = CellRenderer(cell_size(), cell_size()/4.0f, cell_size()/6.0f);
 }
 
 
@@ -226,7 +226,7 @@ void CelticGrid::glRender(int windowWidth, int windowHeight) const {
     std::ofstream svg("../../knot.svg");
     svg << "<?xml version=\"1.0\"?>" << std::endl
         << "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">" << std::endl
-        << "<svg width=\"" << windowWidth << "\" height=\"" << windowHeight << "\" "
+        << "<svg width=\"" << (cell_size()*width()) << "\" height=\"" << (cell_size()*height()) << "\" "
         << "version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">" << std::endl;
     
     if (display_grid()) {

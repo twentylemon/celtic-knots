@@ -3,194 +3,140 @@
 <svg width="600" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <defs><clipPath id="0-0"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#0-0)" fill="transparent" transform="translate(50.000000 50.000000) rotate(-90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 0 50"/>
 </g>
 <defs><clipPath id="0-100"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#0-100)" fill="transparent" transform="translate(50.000000 150.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 L50 0"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 L50 0"/>
 </g>
 <defs><clipPath id="0-200"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#0-200)" fill="transparent" transform="translate(50.000000 250.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 L50 0"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 L50 0"/>
 </g>
 <defs><clipPath id="0-300"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#0-300)" fill="transparent" transform="translate(50.000000 350.000000) rotate(90) scale(1, -1)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M100 0 L0 100"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M100 0 L0 100"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="0-400"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#0-400)" fill="transparent" transform="translate(50.000000 450.000000) rotate(-90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="0-500"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#0-500)" fill="transparent" transform="translate(50.000000 550.000000) rotate(180)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 0 50"/>
 </g>
 <defs><clipPath id="100-0"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#100-0)" fill="transparent" transform="translate(150.000000 50.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="100-100"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#100-100)" fill="transparent" transform="translate(150.000000 150.000000) rotate(-90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M100 0 L0 100"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M100 0 L0 100"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="100-200"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#100-200)" fill="transparent" transform="translate(150.000000 250.000000) rotate(180)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 0 50"/>
 </g>
 <defs><clipPath id="100-300"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#100-300)" fill="transparent" transform="translate(150.000000 350.000000) scale(-1, 1)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="100-400"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#100-400)" fill="transparent" transform="translate(150.000000 450.000000) rotate(180)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M100 0 L0 100"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M100 0 L0 100"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 -50 L50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 -50 L50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="100-500"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#100-500)" fill="transparent" transform="translate(150.000000 550.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<g clip-path="url(#100-500)" fill="transparent" transform="translate(150.000000 550.000000) scale(1, -1)">
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="200-0"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#200-0)" fill="transparent" transform="translate(250.000000 50.000000) scale(-1, 1)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M100 0 L0 100"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M100 0 L0 100"/>
-</g>
-<defs><clipPath id="200-100"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#200-100)" fill="transparent" transform="translate(250.000000 150.000000) rotate(-90) scale(1, -1)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-</g>
-<defs><clipPath id="200-200"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#200-200)" fill="transparent" transform="translate(250.000000 250.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
-</g>
-<defs><clipPath id="200-300"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#200-300)" fill="transparent" transform="translate(250.000000 350.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
-</g>
-<defs><clipPath id="200-400"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#200-400)" fill="transparent" transform="translate(250.000000 450.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="200-500"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#200-500)" fill="transparent" transform="translate(250.000000 550.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<g clip-path="url(#200-500)" fill="transparent" transform="translate(250.000000 550.000000) rotate(180)">
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="300-0"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#300-0)" fill="transparent" transform="translate(350.000000 50.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
-</g>
-<defs><clipPath id="300-100"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#300-100)" fill="transparent" transform="translate(350.000000 150.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
-</g>
-<defs><clipPath id="300-200"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#300-200)" fill="transparent" transform="translate(350.000000 250.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
-</g>
-<defs><clipPath id="300-300"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#300-300)" fill="transparent" transform="translate(350.000000 350.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
-</g>
-<defs><clipPath id="300-400"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#300-400)" fill="transparent" transform="translate(350.000000 450.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="300-500"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#300-500)" fill="transparent" transform="translate(350.000000 550.000000) scale(1, -1)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M100 0 L0 100"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M100 0 L0 100"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="400-0"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#400-0)" fill="transparent" transform="translate(450.000000 50.000000) rotate(-90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<g clip-path="url(#400-0)" fill="transparent" transform="translate(450.000000 50.000000) scale(-1, 1)">
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="400-100"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#400-100)" fill="transparent" transform="translate(450.000000 150.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<g clip-path="url(#400-100)" fill="transparent" transform="translate(450.000000 150.000000)">
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 -50 L50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 -50 L50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="400-200"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#400-200)" fill="transparent" transform="translate(450.000000 250.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
-</g>
-<defs><clipPath id="400-300"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#400-300)" fill="transparent" transform="translate(450.000000 350.000000) rotate(180)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
-</g>
-<defs><clipPath id="400-400"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#400-400)" fill="transparent" transform="translate(450.000000 450.000000) scale(-1, 1)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M100 0 L0 100"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M100 0 L0 100"/>
+<g clip-path="url(#400-200)" fill="transparent" transform="translate(450.000000 250.000000) rotate(-90)">
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="400-500"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#400-500)" fill="transparent" transform="translate(450.000000 550.000000) rotate(180)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 50 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="500-0"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#500-0)" fill="transparent" transform="translate(550.000000 50.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 0 50"/>
 </g>
 <defs><clipPath id="500-100"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#500-100)" fill="transparent" transform="translate(550.000000 150.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
 </g>
 <defs><clipPath id="500-200"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#500-200)" fill="transparent" transform="translate(550.000000 250.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 L50 0"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 L50 0"/>
-</g>
-<defs><clipPath id="500-300"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#500-300)" fill="transparent" transform="translate(550.000000 350.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
-</g>
-<defs><clipPath id="500-400"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
-<g clip-path="url(#500-400)" fill="transparent" transform="translate(550.000000 450.000000)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<g clip-path="url(#500-200)" fill="transparent" transform="translate(550.000000 250.000000) rotate(-90) scale(1, -1)">
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 50 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M100 0 L0 100"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M100 0 L0 100"/>
 </g>
 <defs><clipPath id="500-500"><rect x="-50" y="-50" width="100" height="100"/></clipPath></defs>
 <g clip-path="url(#500-500)" fill="transparent" transform="translate(550.000000 550.000000) rotate(90)">
-<path stroke="rgb(255,0,255)" stroke-width="16.6667" d="M-50 0 Q0 0, 0 50"/>
-<path stroke="rgb(0,255,255)" stroke-width="6.66667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(255,0,255)" stroke-width="11.6667" d="M-50 0 Q0 0, 0 50"/>
+<path stroke="rgb(0,255,255)" stroke-width="5" d="M-50 0 Q0 0, 0 50"/>
 </g>
 </svg>

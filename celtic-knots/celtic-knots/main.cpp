@@ -83,7 +83,9 @@ int main(int argc, char** argv) {
     g.windowHeight = 600;
     
     g.knot = CelticGrid("../../sample-knot.txt");
-    //g.knot = CelticGrid("../../border-knot.txt");
+    //g.knot = CelticGrid("../../8x8knot.txt");
+    //g.knot = CelticGrid("../../10x10knot.txt");
+    //g.knot = CelticGrid(20, 8);
     g.knot.set_cell_size(g.windowWidth / g.knot.width());
 
     g.selected = NO_SELECTION;
